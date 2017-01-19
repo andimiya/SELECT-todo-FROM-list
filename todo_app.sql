@@ -19,3 +19,9 @@ ALTER TABLE "tasks"
   DROP COLUMN "completed";
 ALTER TABLE "tasks"
   ADD COLUMN "completed_at" TIMESTAMP NULL DEFAULT NULL;
+ALTER TABLE "tasks"
+  ALTER COLUMN "updated_at" SET NOT NULL;
+ALTER TABLE "tasks"
+  ALTER COLUMN "updated_at" SET DEFAULT now();
+
+INSERT INTO "tasks" (title, description, created_at, updated_at, completed_at) VALUES ('Study SQL', 'Complete this exercies', now(), now(), NULL);
