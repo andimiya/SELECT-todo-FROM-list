@@ -1,11 +1,14 @@
+\c Andrea;
 
 DROP USER IF EXISTS "michael";
 CREATE USER "michael" WITH ENCRYPTED PASSWORD 'stonebreaker';
 DROP DATABASE IF EXISTS "todo_app";
 CREATE DATABASE "todo_app";
-PSQL todo_app "michael";
+
+\c todo_app;
+
 CREATE TABLE "tasks" (
-  id SERIAL NOT NULL,
+  id SERIAL NOT NULL PRIMARY KEY,
   title varchar(255) NOT NULL,
   description text NULL,
   created_at TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT now(),
@@ -15,4 +18,4 @@ CREATE TABLE "tasks" (
 ALTER TABLE "tasks"
   DROP COLUMN "completed";
 ALTER TABLE "tasks"
-  ADD COLUMN "completed_at" address NULL DEFAULT NULL;
+  ADD COLUMN "completed_at" TIMESTAMP NULL DEFAULT NULL;
