@@ -32,5 +32,8 @@ SELECT * FROM "tasks";  -- Come back to this one!
 UPDATE "tasks"
   SET "completed_at" = now() WHERE id = 1;
 
-SELECT * FROM "tasks"  -- Come back to this one!
+SELECT * FROM "tasks"
   WHERE "completed_at" IS NULL;
+
+SELECT * FROM "tasks"
+  ORDER BY "created_at" DESC;
