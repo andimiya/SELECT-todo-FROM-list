@@ -30,10 +30,7 @@ SELECT * FROM "tasks";  -- Come back to this one!
   -- WHERE "completed_at" = NULL;
 
 UPDATE "tasks"
-  SET "completed_at" WHERE "Study SQL" = now();
+  SET "completed_at" = now() WHERE id = 1;
 
 SELECT * FROM "tasks";  -- Come back to this one!
   -- WHERE "completed_at" = NULL;
-
-
-
