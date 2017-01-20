@@ -55,3 +55,6 @@ SELECT "title",
 
 DELETE FROM "tasks"
   WHERE "title" LIKE '%mistake%';
+
+SELECT * FROM "tasks"
+  ORDER BY "title" ASC;
