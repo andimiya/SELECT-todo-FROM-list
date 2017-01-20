@@ -32,5 +32,5 @@ SELECT * FROM "tasks";  -- Come back to this one!
 UPDATE "tasks"
   SET "completed_at" = now() WHERE id = 1;
 
-SELECT * FROM "tasks";  -- Come back to this one!
-  -- WHERE "completed_at" = NULL;
+SELECT * FROM "tasks"  -- Come back to this one!
+  WHERE "completed_at" IS NULL;
