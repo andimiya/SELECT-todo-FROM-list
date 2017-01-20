@@ -47,3 +47,8 @@ SELECT "title" FROM "tasks"
 
 DELETE FROM "tasks"
   WHERE "title" LIKE '%mistake 1%';
+
+SELECT "title",
+  "description"
+  FROM "tasks"
+  WHERE "title" LIKE '%mistake%';
